@@ -43,7 +43,9 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem "erb_lint", "~> 0.9.0"
+  gem "i18n-tasks", "~> 1.0.14", require: false
+
+  gem "erb_lint", "~> 0.9.0", require: false
   gem "standardrb", "~> 1.0"
 end
 
@@ -74,7 +76,7 @@ gem "cssbundling-rails", "~> 1.4"
 gem "terser", "~> 1.2"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "bootstrap"
-gem "json", "~> 2.9" # Legacy carry-over
+gem "json", "~> 2.10" # Legacy carry-over
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -96,12 +98,10 @@ gem "lograge"
 gem "mail_form", ">= 1.9.0"
 gem "oj"
 gem "puma"
-gem "simple_token_authentication"
 gem "kaminari", "~> 1.2"
 gem "invisible_captcha", "~> 2.3"
 
 gem "devise-i18n"
-gem "i18n-tasks", "~> 1.0.14" # , group: :development
 gem "rails-i18n", "~> 7.0.10"
 gem "translation"
 

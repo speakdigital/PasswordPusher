@@ -246,10 +246,13 @@
                             <% if view.user_id %>
                                 <%= _('Password manually expired by user') %>
                                 <strong><%= view.user.email %></strong>
-                                <%= _('at IP address') %> <strong><%= view.ip %></strong>
-                                <%= _('on') %>
-                                <%= I18n.l view.created_at.in_time_zone(Settings.timezone) %>
+                            <% else %>
+                              <%= _('Password manually expired by an anonymous user') %>
                             <% end %>
+                            <%= _('at IP address') %>
+                            <%= render partial: 'application/ip_address', locals: { ip: view.ip } %>
+                            <%= _('on') %>
+                            <%= I18n.l view.created_at.in_time_zone(Settings.timezone) %>
                             <br>
                             <%= _('The push content has been deleted and the secret URL expired.') %>
                             <br>
@@ -261,7 +264,7 @@
                         <div class="list-group-item list-group-item-action list-group-item-success">
                             <em class="bi bi-check2-square"></em>
                             <%= _('Successful view from IP address') %>
-                            <strong><%= view.ip %></strong>
+                            <%= render partial: 'application/ip_address', locals: { ip: view.ip } %>
                             <%= _('on') %>
                             <%= I18n.l view.created_at.in_time_zone(Settings.timezone) %>
                             <br>
@@ -273,7 +276,7 @@
                         <div class="list-group-item list-group-item-action list-group-item-warning">
                             <em class="bi bi-x-octagon"></em>
                             <%= _('Failed view attempt (already expired) by') %>
-                            <strong><%= view.ip %></strong>
+                            <%= render partial: 'application/ip_address', locals: { ip: view.ip } %>
                             <%= _('on') %>
                             <%= I18n.l view.created_at.in_time_zone(Settings.timezone) %>
                             <br>
