@@ -696,6 +696,7 @@ en:
       invalid_url: must be a valid HTTP or HTTPS URL.
       payload_required: Payload is required.
       premium_required: You need to subscribe to attach files.
+      qr_max_length: The QR code payload is too large.  You can only push up to %{count} bytes.
     deleted: Deleted
     expiration_html: This secret link and all content will be deleted in <strong>%{duration}</strong> or <strong>%{count} more views</strong>, whichever occurs first.
     expire:
@@ -759,7 +760,6 @@ en:
       nothing_here: There's nothing here yet.
       push_id: Push ID
       pushes: Pushes
-      remaining: Remaining
       team_pushes: " / Pushes"
     navbar:
       files: Files
@@ -807,6 +807,7 @@ en:
       none: None
       title: New Push
       unknown: Unknown
+    qr_pushes_disabled: QR code pushes are disabled.
     settings: Settings
     show:
       click_to_reveal: The content is blurred out. Click below to reveal it.
@@ -897,5 +898,6 @@ en:
     forbidden: Forbidden
     none: None
     not_found: Not Found
+    remaining: Remaining
     share: Share
   zero_minutes: 0 minutes
